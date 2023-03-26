@@ -26,13 +26,13 @@ Data.zip needs to be unzipped into the "code" reporsitory.
 
 Execution: 
 
-After cloning the repo, unzip Data.zip to "code" folder and navigate to "code" folder.
+After cloning the repo, 
 This folder should contain the below files:
   1. main.py
-  2. lib/lib_functions.py
+  2. lib.zip
   3. external.config
-  4. Data/
+  4. Data.zip
 Launch Command prompt from inside the "code" folder. 
 
 Execture the below command:
-spark-submit --master "local[*]" --py-files --files external.config main.py
+spark-submit --master "local[*]" --py-files Data.zip, lib.zip --files external.config main.py
