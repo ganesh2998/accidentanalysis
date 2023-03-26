@@ -35,4 +35,7 @@ This folder should contain the below files:
 Launch Command prompt from inside the "code" folder. 
 
 Execture the below command:
+
+
+
 spark-submit --master "local[*]" --py-files Data.zip, lib.zip --files external.config main.py
