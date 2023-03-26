@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 """
@@ -12,7 +12,7 @@ which execute spark dataframe commands to generate required results for the ques
 """
 
 
-# In[2]:
+# In[7]:
 
 
 ####  Importing libraries, functions required 
@@ -26,28 +26,38 @@ import os
 import sys
 
 
+# In[8]:
+
+
+from zipfile import ZipFile
+with ZipFile("./lib.zip",'r') as zObject:
+  
+    # Extracting all the members of the zip 
+    # into a specific location.
+    zObject.extractall(
+        path="./")
+    
+with ZipFile("./Data.zip",'r') as zObject:
+  
+    # Extracting all the members of the zip 
+    # into a specific location.
+    zObject.extractall(
+        path="./")    
+
+
+# In[9]:
+
+
+from lib import lib_functions as f
+
+
 # In[ ]:
 
 
 
 
 
-# In[3]:
-
-
-from lib import lib_functions as f
-
-
-# In[4]:
-
-
-# x = f.config_reader("./external.config")
-
-# print(x)
-# print(x.get("Charges"))
-
-
-# In[11]:
+# In[10]:
 
 
 class AccidentAnalysis:
@@ -343,7 +353,7 @@ class AccidentAnalysis:
         
 
 
-# In[14]:
+# In[11]:
 
 
 if __name__ == '__main__':
@@ -464,7 +474,7 @@ if __name__ == '__main__':
     
 
 
-# In[15]:
+# In[ ]:
 
 
 
