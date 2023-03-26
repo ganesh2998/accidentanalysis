@@ -2,7 +2,7 @@
 This repository is for analysing the US accident data as part of a case study. 
 
 
-We have 8 questions that need to answered by utilizing the data present in Data.zip file. 
+We have 8 questions that need to be answered by utilizing the data present in Data.zip file. 
 
 The solution to all the questions was arrived using Sparks Dataframe API. 
 
@@ -22,20 +22,18 @@ Application should perform below analysis and store the results for each analysi
 
 The path of Input files, Output files and the format of the output file are configurable using the "code/external.config" file. 
 
-Data.zip needs to be unzipped into the "code" reporsitory. 
 
 Execution: 
 
 After cloning the repo, 
-This folder should contain the below files:
+Code folder should contain the below files:
   1. main.py
   2. lib.zip
   3. external.config
   4. Data.zip
+  
 Launch Command prompt from inside the "code" folder. 
 
 Execture the below command:
 
-
-
-spark-submit --master "local[*]" --py-files Data.zip, lib.zip --files external.config main.py
+spark-submit --master "local[*]"  main.py
